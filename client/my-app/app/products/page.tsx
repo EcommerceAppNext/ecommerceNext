@@ -25,59 +25,6 @@ const Products = () => {
   const [data, setData] = useState<number>(6000);
   type Anchor = 'right';
   const [state, setState] = useState<Record<string, boolean>>({});
-  //////
-  const [form, setForm] = useState({})
-  const onchange = (e: any) => {
-    setForm({
-      ...form,
-      [e.target.name]: e.target.value
-    })
-  }
-  const onSubmit = (e: any) => {
-    e.preventDefault(e)
-    axios
-      .post("http://localhost:3000/api/payment/", form)
-      .then((res) => {
-        const { result } = res.data
-        window.location.href = result.link
-
-
-      })
-      .catch(err => console.log(err)
-      )
-
-  }
-  /////
-
-  const toggleDrawer = (productId: string, open: boolean) => (
-    event: React.KeyboardEvent | React.MouseEvent
-  ) => {
-    if (
-      event.type === 'keydown' &&
-      ((event as React.KeyboardEvent).key === 'Tab' ||
-        (event as React.KeyboardEvent).key === 'Shift')
-    ) {
-      return;
-    }
-
-    setState({ ...state, [productId]: open });
-  };
-  const list = (anchor: Anchor) => (
-    <Box
-      sx={{ width: 250 }}
-      role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-    >
-      <List>
-        <ListItem>
-          <ListItemText primary="Hello" />
-        </ListItem>
-      </List>
-      <Divider />
-    </Box>
-  );
-
   const role = sessionStorage.getItem("userRole")
   console.log("role",role);
 
@@ -140,8 +87,6 @@ const Products = () => {
       }
     };
     fetchAllProduct();
-
-
   }, []);
   const filteredProducts = product.filter((p) => p.price <= data);
   return (
@@ -151,18 +96,9 @@ const Products = () => {
         <Button className="btnSeller" variant="contained" disableElevation>
           Seller
         </Button>
-        <Button className="btnSeller" variant="contained" disableElevation>
-          Seller
-        </Button>
       </Link>
       )}
       <div className="filtered">
-        {' '}
-
-        <h1
-          className="wordfilters"
-
-        >
         {' '}
         <h1 className="wordfilters">
           <svg
@@ -179,25 +115,6 @@ const Products = () => {
           </svg>{' '}
           Filters
         </h1>
-
-        <Grid className="star">
-        </Grid>
-        <div className='dvvv'>
-
-          <h3 className='wordf'>
-            Filter buy the price :
-          </h3>
-          <h4>{data} $</h4>
-          <input
-            type="range"
-            min="0"
-            max="6000"
-            step="1"
-            value={data}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setData(parseInt(e.target.value))
-            }
-          />
         <Grid className="star"></Grid>
         <div className="dvvv">
           <h3 className="wordf">Filter buy the price :</h3>
@@ -216,15 +133,16 @@ const Products = () => {
       </div>
       <div className="grid-container">
         {filteredProducts.map((e: any) => {
-        {filteredProducts.map((e: any) => {
           return (
-
-            <div className=" item3" key={e.id}>
             <div className=" item3" key={e.id}>
               <img className="img1" src={e.imageUrl} alt="" />
               <div>
                 <p className=" txt ">{e.name}</p>
                 <p className=" title ">{e.description}</p>
+
+                
+                
+
                 <Link
                         href={{
                         pathname: '/rate',
@@ -242,36 +160,12 @@ const Products = () => {
                     fill="#FF2525"
                   />
                 </svg>
-                <button onClick={toggleDrawer(e.id, true)} className="btnn">
                      </Link>
+                    
                 <button onClick={toggleDrawer(e.id, true)} className="btnn">
                   {e.price} $
                 </button>
                 <Drawer
-                  anchor="right"
-                  open={state[e.id] || false}
-                  onClose={toggleDrawer(e.id, false)}
-                >
-                  <Box sx={{ width: 250 }} role="presentation">
-                    <List>
-                      <ListItem>
-                        <ListItemText primary={`name: ${e.name} `} />
-                        <ListItemText primary={`Price: ${e.price} $`} />
-                        <img src={`${e.imageUrl}`} className='dr' />
-
-
-
-                      </ListItem>
-                    </List>
-                    <Divider />
-                    <h3 className='tinp'>TOTAL : <input onChange={onchange} typeof='text' name="amount" /></h3>
-
-                    <Button onClick={onSubmit} className="btn" variant="contained" disableElevation>
-                      Buy Now
-                    </Button>
-                  </Box>
-                </Drawer>
-
                   anchor="right"
                   open={state[e.id] || false}
                   onClose={toggleDrawer(e.id, false)}
@@ -303,15 +197,7 @@ const Products = () => {
             </div>
           );
         })}
-
-
-
       </div>
-      <div>
-
-
-      </div>
-
       <div></div>
     </div>
   );

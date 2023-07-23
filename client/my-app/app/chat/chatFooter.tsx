@@ -3,9 +3,7 @@ import React, { useState, useRef } from 'react';
 const ChatFooter: React.FC<ProfileProps> = ({ state,setState,sender, reciever, sendMessage, message, setMessage }) => {
   const bottomEl = useRef(null);
 
-  const scrollToBottom = () => {
-    bottomEl?.current?.scrollIntoView({ behavior: 'smooth' });
-  };
+
   const emptyMessageInput = () => {
     const messageInput = (document.getElementById("messageId") as HTMLInputElement);
     messageInput.value = ""    
@@ -20,7 +18,7 @@ const ChatFooter: React.FC<ProfileProps> = ({ state,setState,sender, reciever, s
           id='messageId'
           onChange={(e) => setMessage(e.target.value)}
         />
-        <button className="sendBtn" onClick={(e) => { e.preventDefault(); sendMessage(message, sender, reciever); scrollToBottom();emptyMessageInput();setState(!state) }}>SEND</button>
+        <button className="sendBtn" onClick={(e) => { e.preventDefault(); sendMessage(message, sender, reciever);emptyMessageInput();setState(!state) }}>SEND</button>
       </form>
     </div>
   );

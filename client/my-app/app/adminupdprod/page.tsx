@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 import { useSearchParams } from 'next/navigation'
 import "./style4.css"
 const UpdateCompany=()=>{
-    const [term,setTerm]=useState("")
+    const [term,setTerm]=useState({})
     const searchParams = useSearchParams()
     const search = searchParams.get('id')
     const router = useRouter()

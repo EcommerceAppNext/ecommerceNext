@@ -1,0 +1,42 @@
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customers td,
+  #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    color: white;
+  }
+  .rat {
+    color: white;
+  }
+  .img {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 26px;
+  }
+  .a {
+    margin-top: 10px;
+    margin-left: 10px;
+    color: white;
+  }
+  .i {
+    display: flex;
+  }
+  .title {
+    text-align: center;
+    color: white;
+    margin-top: 133px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  
