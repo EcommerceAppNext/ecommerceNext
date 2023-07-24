@@ -578,7 +578,7 @@
  
 
  .titleh1{
-  padding-top: 20PX;
+  padding-top: 40px;
   padding-left: 500PX;
   color: white;
  }
@@ -588,6 +588,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 200px;
 }
 
 
@@ -623,7 +624,8 @@
 }
   
 .titleh2{
-  padding-top: 20PX;
+  padding-top: 100PX;
   padding-left: 700px;
   color: white;
+  margin-top: 46px;
 }

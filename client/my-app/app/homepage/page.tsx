@@ -36,6 +36,21 @@ const Home = () => {
       <p id='y'>60+</p>
       <p id='shows'>Fashion Shows</p>
       <div id='under'>
+      <Box>
+        <table id='box'></table>
+      </Box>
+      <Box>
+        <table id='box1'></table>
+      </Box>
+      <Box>
+        <table id='box2'></table>
+      </Box>
+      <Box>
+        <table id='box3'></table>
+      </Box>
+       <Box>
+        <table id='box4'></table>
+        </Box>
         <Box>
           <h2 className='titleh2'>Featured Products</h2>
           <div className='featured-products'>
