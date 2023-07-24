@@ -498,6 +498,7 @@
   line-height: normal;
   text-align: center;
   margin-top: -80px;
+ top: 100px;
   }
   #us{
    display: flex;

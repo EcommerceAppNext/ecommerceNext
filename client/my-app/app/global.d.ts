@@ -53,6 +53,7 @@ declare global {
         reciever : number;
         id:number;
         role:string;
+        setState:(state:boolean) => void;
       }
       interface AccProps{
         show:boolean;
