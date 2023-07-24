@@ -26,12 +26,12 @@ const Chat: React.FC<ProfileProps> = () => {
 
     const roles = () => {
         if (role === "admin") {
-            sender = 3
-            reciever = 1
+            sender = 2
+            reciever = 6
         }
         else {
-            sender = 1
-            reciever = 3
+            sender = 6
+            reciever = 2
         }
     }
     roles()

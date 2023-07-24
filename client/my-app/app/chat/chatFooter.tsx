@@ -3,6 +3,7 @@ import React, { useState, useRef } from 'react';
 const ChatFooter: React.FC<ProfileProps> = ({ state,setState,sender, reciever, sendMessage, message, setMessage }) => {
   const bottomEl = useRef(null);
 
+
   const emptyMessageInput = () => {
     const messageInput = (document.getElementById("messageId") as HTMLInputElement);
     messageInput.value = ""    

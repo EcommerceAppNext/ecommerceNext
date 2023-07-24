@@ -91,6 +91,10 @@
   margin-left: 80px;
   text-align: center;
   }
+
+  #about{
+    text-align: center;
+  }
   
   
   
@@ -497,7 +501,7 @@
  top: 100px;
   }
   #us{
-    display: flex;
+   display: flex;
   width: 490px;
   flex-direction: column;
   flex-shrink: 0;
@@ -507,7 +511,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: 180%;
-  margin-left: 500px;
+  margin-left: 600px;
   margin-top: -20px;
   
   }
@@ -524,7 +528,8 @@
     margin-top: -435px;
   }
   .lorm{
-    margin-top: 600px;
+    margin-top: 200px;
+    padding-left: 20px;
   }
   
   #speak{
@@ -547,7 +552,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 200%;
-  margin-left: 700px;
+  margin-left: 600px;
   
   }
   #more{
@@ -573,8 +578,55 @@
   }
  
 
- 
+ .titleh1{
+  padding-top: 40px;
+  padding-left: 500PX;
+  color: white;
+ }
   
  
+ .featured-products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+}
+
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+.product img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: white; 
+}
+
+.product-price {
+  font-size: 16px;
+  margin-top: 5px;
+  color: white; 
+}
   
-  
+.titleh2{
+  padding-top: 100PX;
+  padding-left: 700px;
+  color: white;
+  margin-top: 46px;
+}
