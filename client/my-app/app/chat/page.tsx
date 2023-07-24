@@ -66,6 +66,7 @@ const Chat: React.FC<ProfileProps> = () => {
             .then((res) => {
                 setArr(res.data.filter((elem) => { return elem.senderId === sender && elem.recipientId === reciever || elem.senderId === reciever && elem.recipientId === sender })
                 )
+                setState(!state)
             })
             .catch((err) => console.log(err)
             )
